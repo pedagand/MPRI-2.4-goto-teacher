@@ -1,21 +1,24 @@
+(* sujet
+(* Once you are done writing the code, remove this directive,
+   whose purpose is to disable several warnings. *)
+[@@@warning "-27-34-37-39"]
+  /sujet *)
+
 open Fold
 open Stack
 
 module AlgCat = struct
   module F = CStack
 
-  (* sujet
-     type carrier = NYI
-     type ctxt = NYI
-
-     let alg (type x) (f: x * Stack.t -> carrier) = failwith "NYI"
-        /sujet *)
-
-  (* corrige *)
   type carrier = Stack.t
 
   type ctxt = Stack.t
 
+  (* sujet
+     let alg (type x) (f: x * Stack.t -> carrier) = failwith "NYI"
+        /sujet *)
+
+  (* corrige *)
   let alg (type x) (f : x * Stack.t -> carrier) = function
     | CStack.CEmpty, ns ->
         ns

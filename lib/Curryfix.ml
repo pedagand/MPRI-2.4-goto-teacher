@@ -1,3 +1,9 @@
+(* sujet
+(* Once you are done writing the code, remove this directive,
+   whose purpose is to disable several warnings. *)
+[@@@warning "-33-39"]
+  /sujet *)
+
 open Algebra
 open Mu
 

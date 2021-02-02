@@ -1,3 +1,9 @@
+(* sujet
+(* Once you are done writing the code, remove this directive,
+   whose purpose is to disable several warnings. *)
+[@@@warning "-27-34-37-39"]
+  /sujet *)
+
 open Fold
 open Stack
 

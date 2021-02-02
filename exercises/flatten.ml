@@ -1,22 +1,25 @@
+(* sujet
+(* Once you are done writing the code, remove this directive,
+   whose purpose is to disable several warnings. *)
+[@@@warning "-27-34-37-39"]
+  /sujet *)
+
 open Fold
 open Rose
 
 module AlgFlatten = struct
   module F = CRose
 
-  (* sujet
-     type carrier1 = NYI
-     type carrier2 = NYI
+  type carrier1 = int list
 
+  type carrier2 = int list
+
+  (* sujet
      let alg1 _flattena _flattens = failwith "NYI"
      let alg2 _flattena _flattens = failwith "NYI"
         /sujet *)
 
   (* corrige *)
-  type carrier1 = int list
-
-  type carrier2 = int list
-
   let alg1 (type x1 x2) (_ : x1 -> carrier1) (f2 : x2 -> carrier2) = function
     | CRose.CNode (n, ts) ->
         n :: f2 ts

@@ -26,11 +26,11 @@ You can also build and run the test suite with
 
 If you want to run individual tests, use
 
-    ./runtest.sh src/catamorphism.ml
+    ./runtest.sh exercises/total.ml
 
-to only run the inline tests in the file `src/catamorphism.ml`, or
+to only run the inline tests in the file `exercises/total.ml`, or
 
-    ./runtest.sh src/catamorphism.ml:60
+    ./runtest.sh exercises/total.ml:60
 
 to only run the inline test defined at line 60 in the file
-`src/catamorphism.ml`.
+`exercises/total.ml`.

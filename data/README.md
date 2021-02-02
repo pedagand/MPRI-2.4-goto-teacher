@@ -22,3 +22,5 @@ order:
   1. `lib/Mutual.ml`
   1. `exercises/rose.ml`
   1. `exercises/flatten.ml`
+
+Curious for more? Check out [Unifying structured recursion schemes](https://doi.org/10.1017/S0956796815000258) and [Adjoint folds and unfolds](https://doi.org/10.1016/j.scico.2012.07.011).

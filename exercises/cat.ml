@@ -1,24 +1,32 @@
 (* sujet
 (* Once you are done writing the code, remove this directive,
    whose purpose is to disable several warnings. *)
-[@@@warning "-27-34-37-39"]
+[@@@warning "-27-33-34-37-39"]
   /sujet *)
 
 open Fold
 open Stack
 
+(*****************************************************************)
+(* Algebra                                                       *)
+(*****************************************************************)
+
 module AlgCat = struct
   module F = CStack
 
-  type carrier = Stack.t
-
-  type ctxt = Stack.t
-
   (* sujet
+  type carrier = NYI1
+
+  type ctxt = NYI2
+
      let alg (type x) (f: x * Stack.t -> carrier) = failwith "NYI"
         /sujet *)
 
   (* corrige *)
+  type carrier = Stack.t
+
+  type ctxt = Stack.t
+
   let alg (type x) (f : x * Stack.t -> carrier) = function
     | CStack.CEmpty, ns ->
         ns
@@ -28,10 +36,23 @@ module AlgCat = struct
   (* /corrige *)
 end
 
+(*****************************************************************)
+(* Fixpoint                                                      *)
+(*****************************************************************)
+
+(* sujet
+let cat ms ns = failwith "NYI"
+   /sujet *)
+
+(* corrige *)
 let cat ms ns =
   let module Cat = Curry.Fix (AlgCat) in
   Cat.fix (ms, ns)
+(* /corrige *)
 
+(*****************************************************************)
+(* Tests                                                         *)
+(*****************************************************************)
 
 let%test _ =
   let x1 = Spec.Empty in

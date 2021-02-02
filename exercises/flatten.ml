@@ -1,25 +1,32 @@
 (* sujet
 (* Once you are done writing the code, remove this directive,
    whose purpose is to disable several warnings. *)
-[@@@warning "-27-34-37-39"]
+[@@@warning "-27-33-34-37-39"]
   /sujet *)
 
 open Fold
 open Rose
 
+(*****************************************************************)
+(* Algebra                                                       *)
+(*****************************************************************)
+
 module AlgFlatten = struct
   module F = CRose
 
-  type carrier1 = int list
-
-  type carrier2 = int list
-
   (* sujet
+  type carrier1 = NYI1
+
+  type carrier2 = NYI2
+
      let alg1 _flattena _flattens = failwith "NYI"
      let alg2 _flattena _flattens = failwith "NYI"
         /sujet *)
 
   (* corrige *)
+  type carrier1 = int list
+  type carrier2 = int list
+
   let alg1 (type x1 x2) (_ : x1 -> carrier1) (f2 : x2 -> carrier2) = function
     | CRose.CNode (n, ts) ->
         n :: f2 ts
@@ -34,12 +41,25 @@ module AlgFlatten = struct
   (* /corrige *)
 end
 
+(*****************************************************************)
+(* Fixpoint                                                      *)
+(*****************************************************************)
+
+(* sujet
+let flattena _ = failwith "NYI"
+let flattens _ = failwith "NYI"
+  /sujet *)
+
+(* corrige *)
 let flattena, flattens =
   let module Flatten = Mutual.Fix (AlgFlatten) in
   (Flatten.fix1, Flatten.fix2)
+(* /corrige *)
 
 
-(* Tests *)
+(*****************************************************************)
+(* Tests                                                         *)
+(*****************************************************************)
 
 let%test _ =
   let x = Spec.RNode (0, Spec.RNil) in

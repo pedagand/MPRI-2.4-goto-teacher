@@ -1,11 +1,15 @@
 (* sujet
 (* Once you are done writing the code, remove this directive,
    whose purpose is to disable several warnings. *)
-[@@@warning "-27-34-37-39"]
+[@@@warning "-27-33-34-37-39"]
   /sujet *)
 
 open Fold
 open Stack
+
+(*****************************************************************)
+(* Algebra                                                       *)
+(*****************************************************************)
 
 module AlgZip_Plus = struct
   module F = CStack
@@ -31,10 +35,23 @@ module AlgZip_Plus = struct
   (* /corrige *)
 end
 
+(*****************************************************************)
+(* Fixpoint                                                      *)
+(*****************************************************************)
+
+(* sujet
+let zip_plus ms ns = failwith "NYI"
+  /sujet *)
+
+(* corrige *)
 let zip_plus ms ns =
   let module Zip_Plus = Curryfix.Fix (AlgZip_Plus) in
   Zip_Plus.fix (ms, ns)
+(* /corrige *)
 
+(*****************************************************************)
+(* Tests                                                      *)
+(*****************************************************************)
 
 let%test _ =
   let x1 = Spec.Empty in

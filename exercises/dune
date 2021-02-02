@@ -1,0 +1,6 @@
+(library
+ (name exercises)
+ (libraries fold)
+ (inline_tests)
+ (preprocess
+  (pps ppx_inline_test ppx_deriving.map)))

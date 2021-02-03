@@ -1,11 +1,8 @@
 (* sujet
 (* Once you are done writing the code, remove this directive,
    whose purpose is to disable several warnings. *)
-[@@@warning "-27-33-34-37-39"]
+[@@@warning "-27-32-33-34-37-39"]
   /sujet *)
-(* corrige *)
-(* [@@@warning "-34"] *)
-(* /corrige *)
 
 open Fold
 open Functor

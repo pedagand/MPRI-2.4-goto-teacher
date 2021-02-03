@@ -4,6 +4,12 @@ module type Functor = sig
   val map : ('a -> 'b) -> 'a f -> 'b f
 end
 
+module type ContraFunctor = sig
+  type 'a f
+
+  val map : ('b -> 'a) -> 'a f -> 'b f
+end
+
 module type Functor2 = sig
   type ('a, 'b) f1
 

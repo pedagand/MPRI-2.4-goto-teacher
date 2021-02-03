@@ -2,8 +2,12 @@
 
 ## Order of business
 
+All the datastructures (stack, tree, nat, rose) and programs to
+implement are specified in the module `exercises/spec.ml`.
+
 Your host suggests that you complete the exercises in the following
 order:
+  1. `exercices/magic.ml`
   1. `lib/Catamorphism.ml`
   1. `exercises/stack.ml`
   1. `exercises/total.ml`

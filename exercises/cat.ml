@@ -15,12 +15,12 @@ module AlgCat = struct
   module F = CStack
 
   (* sujet
-  type carrier = NYI1
+     type carrier = NYI1
 
-  type ctxt = NYI2
+     type ctxt = NYI2
 
-     let alg (type x) (f: x * Stack.t -> carrier) = failwith "NYI"
-        /sujet *)
+        let alg (type x) (f: x * Stack.t -> carrier) = failwith "NYI"
+           /sujet *)
 
   (* corrige *)
   type carrier = Stack.t
@@ -48,6 +48,8 @@ let cat ms ns = failwith "NYI"
 let cat ms ns =
   let module Cat = Curry.Fix (AlgCat) in
   Cat.fix (ms, ns)
+
+
 (* /corrige *)
 
 (*****************************************************************)

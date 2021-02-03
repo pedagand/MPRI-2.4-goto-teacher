@@ -15,12 +15,12 @@ module AlgShunt = struct
   module F = CStack
 
   (* sujet
-  type carrier = NYI1
+     type carrier = NYI1
 
-  type ctxt = NYI2
+     type ctxt = NYI2
 
-     let alg (type x) (f: x * Stack.t -> carrier) = failwith "NYI"
-        /sujet *)
+        let alg (type x) (f: x * Stack.t -> carrier) = failwith "NYI"
+           /sujet *)
 
   (* corrige *)
   type carrier = Stack.t
@@ -48,12 +48,13 @@ let shunt ms ns = failwith "NYI"
 let shunt ms ns =
   let module Shunt = Curry.Fix (AlgShunt) in
   Shunt.fix (ms, ns)
+
+
 (* /corrige *)
 
 (*****************************************************************)
 (* Tests                                                         *)
 (*****************************************************************)
-
 
 let%test _ =
   let x1 = Spec.Empty in

@@ -5,6 +5,7 @@
   /sujet *)
 (* corrige *)
 [@@@warning "-27"]
+
 (* /corrige *)
 
 open Fold

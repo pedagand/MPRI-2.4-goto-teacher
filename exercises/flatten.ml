@@ -15,16 +15,17 @@ module AlgFlatten = struct
   module F = CRose
 
   (* sujet
-  type carrier1 = NYI1
+     type carrier1 = NYI1
 
-  type carrier2 = NYI2
+     type carrier2 = NYI2
 
-     let alg1 _flattena _flattens = failwith "NYI"
-     let alg2 _flattena _flattens = failwith "NYI"
-        /sujet *)
+        let alg1 _flattena _flattens = failwith "NYI"
+        let alg2 _flattena _flattens = failwith "NYI"
+           /sujet *)
 
   (* corrige *)
   type carrier1 = int list
+
   type carrier2 = int list
 
   let alg1 (type x1 x2) (_ : x1 -> carrier1) (f2 : x2 -> carrier2) = function
@@ -54,8 +55,9 @@ let flattens _ = failwith "NYI"
 let flattena, flattens =
   let module Flatten = Mutual.Fix (AlgFlatten) in
   (Flatten.fix1, Flatten.fix2)
-(* /corrige *)
 
+
+(* /corrige *)
 
 (*****************************************************************)
 (* Tests                                                         *)

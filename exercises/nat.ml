@@ -31,7 +31,7 @@ module Nat = Mu (CNat)
 let zero () = failwith "NYI"
 let succ n = failwith "NYI"
 
-let rec from_nat _ = failwith "NYI"
+let rec from_nat (n: Spec.nat): Nat.t = failwith "NYI"
   /sujet *)
 
 (* corrige *)

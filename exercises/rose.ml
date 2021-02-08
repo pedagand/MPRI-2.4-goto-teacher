@@ -42,8 +42,8 @@ let node n ts = failwith "NYI"
 let nil () = failwith "NYI"
 let cons t ts = failwith "NYI"
 
-let rec from_rose _ = failwith "NYI"
-and from_roses _ = failwith "NYI"
+let rec from_rose (t: Spec.rose): Rose.t1 = failwith "NYI"
+and from_roses (ts: Spec.roses): Rose.t2 = failwith "NYI"
   /sujet *)
 
 (* corrige *)

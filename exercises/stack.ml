@@ -31,7 +31,7 @@ module Stack = Mu (CStack)
 let empty () = failwith "NYI"
 let push n ns = failwith "NYI"
 
-let rec from_stack _ = failwith "NYI"
+let rec from_stack (s: Spec.stack): Stack.t = failwith "NYI"
   /sujet *)
 
 (* corrige *)

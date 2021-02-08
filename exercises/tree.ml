@@ -31,7 +31,7 @@ module Tree = Mu (CTree)
 let leaf () = failwith "NYI"
 let node l a r = failwith "NYI"
 
-let rec from_tree _ = failwith "NYI"
+let rec from_tree (t: Spec.tree): Tree.t = failwith "NYI"
   /sujet *)
 
 (* corrige *)
